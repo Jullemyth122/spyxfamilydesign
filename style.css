@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "wild_worldbold";
+    src: url("https://assets.codepen.io/756881/wild_world-webfont.woff2")
+        format("woff2"),
+        url("https://assets.codepen.io/756881/wild_world-webfont.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #111;
+    font-family: "Signika Negative", sans-serif, Arial;
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 2700px;
+    background: black;
+    position: relative;
+}
+
+.container .p {
+    top: 350px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    /* color: white; */
+    color: #111;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: white;
+    font-size: 5vw;
+    font-family: "wild_worldbold";
+}
+
+.container .p span {
+    color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: red;
+}
+
+.container .p:first-child span {
+    color: red;
+}
+
+.container .p:first-child {
+    color: white;
+    z-index: 2;
+}
+
+.container .picture {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 50px;
+    height: 50px;
+    font-size: 5vw;
+    font-family: "wild_worldbold";
+    background: red;
+    color: transparent;
+    opacity: 0;
+    z-index: -1;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: white;
+}
+.container .picture-width {
+    position: absolute;
+    top: 1050px;
+    width: 100vw;
+    height: 50vh;
+    z-index: 1;
+    font-size: 5vw;
+    font-family: "wild_worldbold";
+    background: black;
+    color: transparent;
+    /* opacity: 0; */
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: white;
+}
+
+.container .picture-width .hide:nth-child(1) {
+    -webkit-text-stroke-color: wheat;
+}
+.container .picture-width .hide:nth-child(2) {
+    -webkit-text-stroke-color: red;
+}
+.container .picture-width .hide:nth-child(3) {
+    -webkit-text-stroke-color: pink;
+}
+ 
+.container .hide {
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+}
+.container h2 {
+    display: inline-block;
+    transform: translateY(50%);
+}
+
+.circle {
+    top: 1750px;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: "wild_worldbold";
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+.circle-inside {
+    width: 0%;
+    height: 0%;
+    top: -100%;
+    left: -100%;
+    z-index: -1;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+}
+
+.circle:hover {
+    color: black;
+}
+
+.enlarge {
+    width: 100%;
+    height: 100%;
+}
+
+.imgContainer {
+    position: absolute;
+    top: 1350px;
+    z-index: 2;
+    right: 10%;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.imgbox {
+    top: -50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.imgbox img {
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+
+.slideContainer {
+    width: auto;
+    height: 50vh;
+    white-space: nowrap;
+    top: 2000px;
+    left: 0%;
+    position: absolute;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.cursor {
+    width: 25px;
+    height: 25px;
+    background: rgba(231, 231, 231, 0.445);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transition: all 0.2s ease;
+    transition-property: background,transform;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.cursor h5 {
+    font-size: 20px;
+    color: red;
+    font-family: "wild_worldbold";
+
+}
+
+.dot {
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: black;
+}
+.enlargeDot {
+    width: 50px;
+    height: 50px;
+}
+
+.enlargeCursor {
+    width: 100px;
+    height: 100px;
+}
+
+.increase {
+
+}
+
+.slide {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 500px;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    width: 100%;
+    height: 1500px;
+    background: orange;
+}
+
+
+@media (max-width:900px) {
+    .imgContainer {
+        position: absolute;
+        top: 1250px;
+        z-index: 2;
+        right: 10%;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .slide {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 33.3vw;
+        height: 500px;
+    }
+}
